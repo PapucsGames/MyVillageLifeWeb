@@ -197,3 +197,20 @@ a {
     padding-bottom: 0%;
     padding-left: 3%;
 }
+
+.privacy
+{
+    text-align: left;
+    text-shadow: black 3px 3px 4px;
+    background-color: rgba(17, 17, 17, 0.7);
+}
+
+.priv-label
+{
+    font-weight: bold;
+}
+
+.privacy h4 {
+    text-align: center;
+}
+
