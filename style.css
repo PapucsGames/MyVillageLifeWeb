@@ -214,3 +214,19 @@ a {
     text-align: center;
 }
 
+#contactD > table#contsTable {
+    width: 65em;
+}
+
+table#contsTable td{
+    font-weight: bold;
+}
+
+table#contsTable td div > a {
+    font-weight:normal;
+    color: rgb(180, 180, 180); 
+}
+
+table#contsTable td div {
+    margin-bottom: 3px;
+}
