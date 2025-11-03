@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PapucsGames_Logos">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/content/PapucsGames_Logos.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

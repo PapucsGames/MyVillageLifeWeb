@@ -1,3 +1,4 @@
+/* ========== ALAPSTÍLUSOK ========== */
 body {
     background-color: black;
     background-image: url(images/backgorund_blur.png);
@@ -5,149 +6,304 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     color: white;
-    font-size: larger;
+    text-align: justify;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
 }
 
+/* ======= SZEKCIÓK ======= */
 .opBackground {
-    background-color: rgb(0, 0, 0, 0.5) ;
-    border-style: solid;
-    border-color: rgb(0, 0, 0, 0.4);
-    border-width: 5pt;
-    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 4px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 2em;
 }
 
+/* ======= FEJLÉC ======= */
+#pglogoBig {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 2em auto;
+}
+
+/* ======= LEÍRÁS BLOKK ======= */
+.description {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.2em;
+    margin: 2em auto;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: justify;
+}
+
+/* ======= GOMBOK ======= */
 ul.buttons {
     list-style: none;
-    /*margin-left: 0.5%;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    padding: 0;
+    margin: 2em 0;
 }
 
-.btns {
-    width: 45%;
+ul.buttons li img {
+    width: 80px;
+    height: 80px;
+    filter: invert(100%);
+    transition: transform 0.3s, filter 0.3s;
 }
 
-.btnsWide {
-    width: 92%;
+ul.buttons li img:hover {
+    transform: scale(1.2);
+    filter: invert(80%) sepia(30%);
 }
 
-#wideLi {
-    padding-right: 5%;
+ul.buttons li {
+    flex: 1 1 100px;
+    text-align: center;
 }
 
-#lastLi {
-    width: 8%;
-    height: 15%;
-}
-
+.btns,
+.btnsWide,
 .btnsLast {
-    width: 80%;
-}
-
-.buttons li {
-    display: inline;
-    float: left;
-    width: 13.8%;
-}
-
-.buttons {
     width: 100%;
+    max-width: 120px;
+    height: auto;
+    transition: transform 0.2s;
 }
 
-.description {
-    background-color: rgb(0, 0, 0, 0.85) ;
-    float: right;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    width: 40%;
-    margin-right: 10%;
-    margin-left: auto;
-    margin-top: 8%;
+.btns:hover,
+.btnsWide:hover,
+.btnsLast:hover {
+    transform: scale(1.05);
 }
 
-.reviewL {
-    background-color: rgb(0, 0, 0, 0.85) ;
-    float: left;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 1px;
-    padding-bottom: 10px;
-    width: 40%;
-    margin-right: auto;
-    margin-left: 5%;
-    margin-top: 1%;
-    font-style: italic;
+#pglogoBig {
+    transition: transform 0.5s;
 }
 
-.reviewR {
-    background-color: rgb(0, 0, 0, 0.85) ;
-    float: right;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 1px;
-    padding-bottom: 10px;
-    width: 40%;
-    margin-right: 5%;
-    margin-left: auto;
-    margin-top: 1%;
-    font-style: italic;
+#pglogoBig:hover {
+    transform: scale(1.1);
 }
 
-.reviewIcon {
-    width: 15%;
-    float: left;
-    padding-top: 2.5%;
-    padding-bottom: auto;
-    padding-right: 5%;
+/* ======= JÁTÉK RÉSZ ======= */
+#mvllogo {
+    width: 70%;
+    max-width: 300px;
+    display: block;
+    margin: 1.5em auto;
+}
+
+.borito {
+    width: 60%;
+    max-width: 250px;
+    display: block;
+    margin: 1em auto;
 }
 
 iframe {
     width: 100%;
-}
-
-h1 {
-    text-align: center;
-    text-shadow: black 3px 3px 4px;
-}
-
-#mvllogo {
-    width: 55%;
+    max-width: 560px;
     height: auto;
-    margin-left: 22%;
-    margin-right: 5%;
-    margin-top: 2%;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 1.5em auto;
+    border: none;
 }
 
-.borito {
-    width: 43%;
+/* ======= REVIEWS ======= */
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    margin: 2em auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1.2em;
+    border-radius: 10px;
+    width: 100%;
+    font-style: italic;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.review-item img.reviewIcon {
+    width: 80px;
     height: auto;
-    margin-left: 29%;
-    margin-right: 5%;
-    margin-top: 2%;
+    border-radius: 6px;
+    margin-right: 1em;
+    flex-shrink: 0;
 }
 
-.avfor {
-    text-align: center;
-    text-shadow: black 3px 3px 4px;
+.review-item p {
+    flex: 1;
+    margin: 0;
+    line-height: 1.4em;
+    text-align: left;
 }
 
-h3 {
-    text-align: center;
-    text-shadow: black 3px 3px 4px;
-    font-size: x-large;
+/* Mobilon egymás alá kerül */
+@media (max-width: 600px) {
+    .review-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .review-item img.reviewIcon {
+        margin: 0 0 0.8em 0;
+    }
 }
 
-h4 {
+/* ======= SCREENSHOTOK ======= */
+.screens {
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    margin: 1.5em auto;
+    border-radius: 8px;
+}
+
+/* ======= MODERN FOOTER ======= */
+footer {
+    background-color: rgba(17, 17, 17, 0.95);
+    padding-bottom: 2em;
+    color: #ccc;
+    font-size: 0.95rem;
     text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1em;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#footerP {
+    font-weight: bold;
+    font-size: 1rem;
+    text-shadow: black 2px 2px 4px;
+    margin-bottom: 2em;
+}
+
+#pglogo {
+    height: 35px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+#contactD {
+    text-align: center;
+}
+
+#contactD h2 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+    text-shadow: black 2px 2px 4px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffcc00;
+    transform: translateX(5px);
+}
+
+/* ======= RESZPONZÍV FOOTER ======= */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+
+    #footerP {
+        font-size: 0.9rem;
+    }
+}
+
+#pglogo {
+    height: 40px;
+    vertical-align: text-bottom;
+    horiz-align: center;
+}
+
+#contactD {
+    max-width: 900px;
+    margin: 0 auto;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+#contsTable {
+    width: 100%;
+}
+
+#contsTable td {
+    vertical-align: top;
+    padding: 0.5em;
+}
+
+#contsTable a {
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+}
+
+/* ======= PRIVACY ======= */
+.privacy {
+    background-color: rgba(17, 17, 17, 0.7);
+    padding: 2em;
+    margin: 2em auto;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+.priv-label {
+    font-weight: bold;
+}
+
+/* ======= FEJ & CÍMEK ======= */
+h1, h2, h3, h4 {
     text-shadow: black 3px 3px 4px;
-    font-size: large;
+    text-align: center;
 }
 
 a {
@@ -155,78 +311,145 @@ a {
     color: rgb(255, 204, 0);
 }
 
-#pglogoBig {
-    width: 65%;
+/* ======= RESZPONZÍV TÖRÉSPONTOK ======= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .description, .reviewL, .reviewR {
+        width: 90%;
+    }
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .description, .reviewL, .reviewR {
+        width: 95%;
+        padding: 1em;
+    }
+
+    ul.buttons {
+        gap: 0.5em;
+    }
+
+    .btns, .btnsWide, .btnsLast {
+        max-width: 80px;
+    }
+
+    iframe {
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 16 / 9;
+    }
+
+    #contactD {
+        font-size: 0.8rem;
+    }
+
+    #contsTable {
+        display: block;
+    }
+
+    #contsTable td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Kis telefon */
+@media (max-width: 480px) {
+    #pglogoBig {
+        max-width: 250px;
+    }
+
+    .borito, #mvllogo {
+        width: 80%;
+    }
+
+    .screens {
+        width: 95%;
+    }
+
+    .btns, .btnsWide, .btnsLast {
+        max-width: 70px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h3, h4 {
+        font-size: 1rem;
+    }
+}
+
+
+/* ======= BORÍTÓ KÉP KÖZÉPRE ======= */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section a {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+}
+
+/* ======= BORÍTÓ HOVER EFFEKT ======= */
+.borito {
+    width: 100%;
+    max-width: 250px;
     height: auto;
-    margin-left: 30%;
-    margin-right: 5%;
-    margin-top: 8%;
+    display: block;
+    margin: 1em auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    transform-origin: center center;
 }
 
-#pglogo {
-    height: 40px;
-    vertical-align: text-bottom; 
+.borito:hover {
+    transform: rotate(-6deg) scale(1.15);
 }
 
-#footerP {
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    text-shadow: black 3px 3px 4px;
-    align-self: center;
+/* ======= GAMES GRID ======= */
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2em;
+    justify-items: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
+
+/* A section kinézete marad középre igazított */
+.games-container section {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    width: 350px;
+    padding: 1em;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: 2%;
-    font-size: 2px;
-    font-size: 1.2vw;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#contactD {
-    text-align: left;
-    background-color: rgba(17, 17, 17, 0.9);
-    padding: 2%;
-    font-size: 15px;
-    color: gray;
-    padding-left: 5%;
+.games-container section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.screens {
-    float: left;
-    width: 40%;
-    padding-top: 7%;
-    padding-bottom: 0%;
-    padding-left: 3%;
-}
-
-.privacy
-{
-    text-align: left;
-    text-shadow: black 3px 3px 4px;
-    background-color: rgba(17, 17, 17, 0.7);
-}
-
-.priv-label
-{
-    font-weight: bold;
-}
-
-.privacy h4 {
-    text-align: center;
-}
-
-#contactD > table#contsTable {
-    width: 65em;
-}
-
-table#contsTable td{
-    font-weight: bold;
-}
-
-table#contsTable td div > a {
-    font-weight:normal;
-    color: rgb(180, 180, 180); 
-}
-
-table#contsTable td div {
-    margin-bottom: 3px;
+/* Mobil barát módosítás — 1 oszlop, ha nem fér el kettő */
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
 }
